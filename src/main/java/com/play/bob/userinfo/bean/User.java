@@ -1,5 +1,7 @@
 package com.play.bob.userinfo.bean;
 
+import com.play.bob.city.bean.City;
+
 import java.util.UUID;
 
 /**

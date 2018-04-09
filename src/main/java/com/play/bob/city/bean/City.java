@@ -1,4 +1,4 @@
-package com.play.bob.userinfo.bean;
+package com.play.bob.city.bean;
 
 import java.io.Serializable;
 

@@ -1,6 +1,6 @@
 package com.play.bob.userinfo.controller;
 
-import com.play.bob.userinfo.bean.City;
+import com.play.bob.city.bean.City;
 import com.play.bob.mapper.CityMapper;
 import com.play.bob.userinfo.bean.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/user")
@@ -49,20 +52,5 @@ public class UserController {
         config.put("port", "8080");
         config.put("address", "北京市");
         return config;
-    }
-
-    @RequestMapping("/addcity")
-    @ResponseBody
-    String addCity() {
-        City city = new City();
-        city.setCountry("中国");
-        city.setState("北京");
-        city.setName("北京市");
-        boolean result = cityMapper.addCity(city.getName(), city.getState(), city.getCountry());
-        if (result) {
-            return "添加成功";
-        } else {
-            return "添加失败";
-        }
     }
 }
