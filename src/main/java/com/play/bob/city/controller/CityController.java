@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
+/**
+ * @author baobo.peng
+ */
 @Controller
 @RequestMapping("/city")
 public class CityController {

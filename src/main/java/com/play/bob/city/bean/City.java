@@ -2,6 +2,9 @@ package com.play.bob.city.bean;
 
 import java.io.Serializable;
 
+/**
+ * @author baobo.peng
+ */
 public class City implements Serializable {
 
     private static final long serialVersionUID = 1L;

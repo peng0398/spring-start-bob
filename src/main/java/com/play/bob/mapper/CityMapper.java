@@ -9,6 +9,9 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
+/**
+ * @author baobo.peng
+ */
 @Mapper
 public interface CityMapper {
 

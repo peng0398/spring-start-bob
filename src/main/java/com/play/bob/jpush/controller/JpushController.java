@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * @author baobo.peng
+ */
 @Controller
 @RequestMapping("/jpush")
 public class JpushController {
@@ -60,7 +63,7 @@ public class JpushController {
         return result;
     }
 
-    PushPayload pushAllAlert(String pushMsg) {
+    private PushPayload pushAllAlert(String pushMsg) {
         if (StringUtils.isEmpty(pushMsg)) {
             pushMsg = "Hello Everyone";
         }
