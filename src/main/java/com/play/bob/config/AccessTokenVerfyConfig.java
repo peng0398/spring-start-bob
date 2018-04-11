@@ -1,4 +1,4 @@
-package com.play.bob;
+package com.play.bob.config;
 
 import com.play.bob.tokenverify.interceptor.AccessTokenVerifyIntercepter;
 import org.springframework.context.annotation.Bean;
@@ -19,7 +19,7 @@ public class AccessTokenVerfyConfig extends WebMvcConfigurationSupport {
 
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(accessTokenVerifyIntercepter()).addPathPatterns("/user/**");
+        registry.addInterceptor(accessTokenVerifyIntercepter()).addPathPatterns("/jpush/**");
         super.addInterceptors(registry);
     }
 }
