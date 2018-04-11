@@ -4,13 +4,14 @@ import com.play.bob.tokenverify.interceptor.AccessTokenVerifyIntercepter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 /**
  * @author baobo.peng
  */
 @Configuration
-public class AccessTokenVerfyConfig extends WebMvcConfigurationSupport {
+public class WebMvcConfig extends WebMvcConfigurationSupport {
 
     @Bean
     public AccessTokenVerifyIntercepter accessTokenVerifyIntercepter() {
@@ -21,5 +22,10 @@ public class AccessTokenVerfyConfig extends WebMvcConfigurationSupport {
     protected void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(accessTokenVerifyIntercepter()).addPathPatterns("/jpush/**");
         super.addInterceptors(registry);
+    }
+
+    @Override
+    protected void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
     }
 }
