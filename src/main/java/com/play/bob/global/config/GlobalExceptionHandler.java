@@ -1,4 +1,4 @@
-package com.play.bob.config;
+package com.play.bob.global.config;
 
 import com.play.bob.base.ErrorInfo;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -21,7 +21,6 @@ public class GlobalExceptionHandler {
         ErrorInfo<String> errorInfo = new ErrorInfo<>();
         errorInfo.setMessage(e.getMessage());
         errorInfo.setCode(ErrorInfo.ERROR);
-        errorInfo.setData("Some Data");
         errorInfo.setUrl(req.getRequestURL().toString());
         return errorInfo;
     }

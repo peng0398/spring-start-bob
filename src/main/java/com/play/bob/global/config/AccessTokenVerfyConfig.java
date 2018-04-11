@@ -1,4 +1,4 @@
-package com.play.bob.config;
+package com.play.bob.global.config;
 
 import com.play.bob.tokenverify.interceptor.AccessTokenVerifyIntercepter;
 import org.springframework.context.annotation.Bean;
